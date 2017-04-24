@@ -19,6 +19,7 @@ $rules = [
     'trailing_comma_in_multiline_array' => false,
     // additional rules
     'array_syntax' => ['syntax' => 'short'],
+    'ordered_imports' => true,
     'phpdoc_order' => true,
 ];
 

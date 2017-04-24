@@ -1,8 +1,8 @@
 <?php
 
-use Monolog\Logger;
 use Monolog\Formatter\LineFormatter;
 use Monolog\Handler\StreamHandler;
+use Monolog\Logger;
 
 require __DIR__ . '/vendor/autoload.php';
 
