@@ -284,8 +284,8 @@ var selfoss = {
                                          data.stats.starred);
                     selfoss.refreshTags(data.tagshtml);
 
-                    if( 'sourceshtml' in data )
-                        selfoss.refreshSources(data.sourceshtml);
+                    if( 'sources' in data )
+                        selfoss.refreshSources(data.sources);
 
                     if( 'items' in data )
                         selfoss.ui.refreshItemStatuses(data.items);
@@ -406,8 +406,8 @@ var selfoss = {
      * @param currentSource the index of the active source
      */
     refreshSources: function(sources, currentSource) {
-        $('#nav-sources li').remove();
-        $('#nav-sources').append(sources);
+        var renderedSources = selfoss.templates.navSources({sources: sources});
+        $('#nav-sources').html(renderedSources);
         if( selfoss.filter.source ) {
             if(!selfoss.db.isValidSource(selfoss.filter.source))
                 selfoss.ui.showError('Unknown source id: '
