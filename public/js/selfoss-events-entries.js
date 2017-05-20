@@ -199,7 +199,7 @@ selfoss.events.entries = function(e) {
             url: $('base').attr('href') + 'source/' + selfoss.filter.source + '/update',
             type: 'POST',
             dataType: 'text',
-            data: { ajax: true },
+            data: {},
             success: function(response) {
                 // hide nav on smartphone
                 if(selfoss.isSmartphone()) {

@@ -22,7 +22,6 @@ var selfoss = {
         source: '',
         sourcesNav: false,
         extraIds: [],
-        ajax: true
     },
 
     /**
